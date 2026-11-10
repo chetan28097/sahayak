@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+!.env.example
+
+# runtime data (fake, but keep out of git)
+/data/sessions/
+/data/slips/
+/data/logs/
+/data/tts-cache/
+/coverage/
+/data/requests/
+/data/events.jsonl
+/data/branch-config.json
+*.tmp
+smoke-tts.wav
+/design-system/

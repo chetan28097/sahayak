@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "historyId": "3895a344-a55c-4ccc-b94c-e9c99878afc5",
+  "currentRevision": "4637a090-ecc1-4733-98af-c325691cb521",
+  "pendingChanges": false,
+  "files": {
+    "assets/fonts/lexend.woff2": {
+      "hash": "1ec8f6ee2750554b4bc59ff0b507d316a82a7ba37e0e5bebc41d3bd9b9faad46",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\1e\\1ec8f6ee2750554b4bc59ff0b507d316a82a7ba37e0e5bebc41d3bd9b9faad46"
+    },
+    "assets/fonts/noto-deva.woff2": {
+      "hash": "129e051f25c69c8d6e2725562b3916c5aabea2806dd6baca3a349ec99cea5140",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\12\\129e051f25c69c8d6e2725562b3916c5aabea2806dd6baca3a349ec99cea5140"
+    },
+    "assets/fonts/noto-kannada.woff2": {
+      "hash": "22c2991d80fe5e705915e24418dc176d00cd6d4f9514489ee2b1b6144d9cef67",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\22\\22c2991d80fe5e705915e24418dc176d00cd6d4f9514489ee2b1b6144d9cef67"
+    },
+    "assets/fonts/source-sans.woff2": {
+      "hash": "587435ca9d90732b8c1ce4958222c6ad3ade2b875500188e1d318efbcb61f4c5",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\58\\587435ca9d90732b8c1ce4958222c6ad3ade2b875500188e1d318efbcb61f4c5"
+    },
+    "assets/qr.svg": {
+      "hash": "a7d13b091518dd6264731dc68dbfc660b2b83453655397d1a21af7b593e8a367",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\a7\\a7d13b091518dd6264731dc68dbfc660b2b83453655397d1a21af7b593e8a367"
+    },
+    "assets/sfx/impact/impactBell_heavy_000.ogg": {
+      "hash": "94b8bb5f2d43ab65e4bcc32b28562416e9bc2c51d9fd4be1e333660ee52f977f",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\94\\94b8bb5f2d43ab65e4bcc32b28562416e9bc2c51d9fd4be1e333660ee52f977f"
+    },
+    "assets/sfx/impact/impactPunch_heavy_000.ogg": {
+      "hash": "b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\b3\\b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8"
+    },
+    "assets/sfx/impact/impactSoft_medium_001.ogg": {
+      "hash": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\76\\7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf"
+    },
+    "assets/sfx/impact/impactSoft_medium_003.ogg": {
+      "hash": "5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\5c\\5c4a1f35fde7e14046931da7bc3d1b23736541b7190ba107e08a379c4ca43cd6"
+    },
+    "assets/sfx/interface/click_002.ogg": {
+      "hash": "adcd1f4adc35f1b41bc1b5bbefeff7aa44f2f3f0d96d3199b544140c7c1e761c",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\ad\\adcd1f4adc35f1b41bc1b5bbefeff7aa44f2f3f0d96d3199b544140c7c1e761c"
+    },
+    "assets/sfx/interface/drop_001.ogg": {
+      "hash": "692ee3a6f1821402ca649ff735bee9591dc4846c8098fc7d6a90fd15fa57c1af",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\69\\692ee3a6f1821402ca649ff735bee9591dc4846c8098fc7d6a90fd15fa57c1af"
+    },
+    "assets/sfx/interface/drop_002.ogg": {
+      "hash": "4ac4d1cef7e936965cbf795852ca2020300b9e2ba7daa59f2bf4f1f7bf416218",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\4a\\4ac4d1cef7e936965cbf795852ca2020300b9e2ba7daa59f2bf4f1f7bf416218"
+    },
+    "assets/sfx/interface/glitch_002.ogg": {
+      "hash": "1da06a2e63ce131f5e0316ca27c75fc0d672db7a8f9b986c70693f2bd992eabc",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\1d\\1da06a2e63ce131f5e0316ca27c75fc0d672db7a8f9b986c70693f2bd992eabc"
+    },
+    "assets/sfx/interface/switch_002.ogg": {
+      "hash": "6fc395be2ad1f99ce318a5d28f98fb76dbeb676d83a0b28239d8c1fb90736180",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\6f\\6fc395be2ad1f99ce318a5d28f98fb76dbeb676d83a0b28239d8c1fb90736180"
+    },
+    "assets/vo/gnani-kn-greet.wav": {
+      "hash": "312e61e17b2755b774d0896b8e9c31e95d5de0b31bbcca7a8aff2cf201513de8",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\31\\312e61e17b2755b774d0896b8e9c31e95d5de0b31bbcca7a8aff2cf201513de8"
+    },
+    "assets/vo/v1.wav": {
+      "hash": "905990e3a5b0a70b37ad352b5eeda1df23c98f4e9c86249402115d91708b8aa0",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\90\\905990e3a5b0a70b37ad352b5eeda1df23c98f4e9c86249402115d91708b8aa0"
+    },
+    "assets/vo/v2.wav": {
+      "hash": "f58e15f80a30da08e1d746aae2ebd577ca648416cc2dbcb15d767279d4b4745e",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\f5\\f58e15f80a30da08e1d746aae2ebd577ca648416cc2dbcb15d767279d4b4745e"
+    },
+    "assets/vo/v3.wav": {
+      "hash": "95943bc28c51e7a5956e6d43d48ff2c79b9ba0136082be206e8916bad404322b",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\95\\95943bc28c51e7a5956e6d43d48ff2c79b9ba0136082be206e8916bad404322b"
+    },
+    "assets/vo/v4.wav": {
+      "hash": "f4231e3e07e82ca2b6d6e61897b418cc1a179c14c32ec3ce14c4b384d224b972",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\f4\\f4231e3e07e82ca2b6d6e61897b418cc1a179c14c32ec3ce14c4b384d224b972"
+    },
+    "assets/vo/v5.wav": {
+      "hash": "a318596c77ca8e9cf6ddbabcbf110cc8c7e7f458f2b30f8aedf289def47032d9",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\a3\\a318596c77ca8e9cf6ddbabcbf110cc8c7e7f458f2b30f8aedf289def47032d9"
+    },
+    "assets/vo/v6.wav": {
+      "hash": "2c870b6208fc9a99351aeda28e8600834079fdd22f3d8e6fc2de7e38c86765f4",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\2c\\2c870b6208fc9a99351aeda28e8600834079fdd22f3d8e6fc2de7e38c86765f4"
+    },
+    "index.html": {
+      "hash": "8d5f68a347d2bd5d60fc302c4f306080891f332e05da5567645d93886a8e387e",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\8d\\8d5f68a347d2bd5d60fc302c4f306080891f332e05da5567645d93886a8e387e"
+    },
+    "assets/music/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3": {
+      "hash": "aa56ab1cdcbef6b05566c6a7c114323078580ccf6a740a9e6c6b6c4b40b4389f",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\aa\\aa56ab1cdcbef6b05566c6a7c114323078580ccf6a740a9e6c6b6c4b40b4389f"
+    },
+    "assets/vo/g_v1.wav": {
+      "hash": "a972701be6e8b9ccb96a758781bc7dfc64b1134b2e6b54533027a25a712604eb",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\a9\\a972701be6e8b9ccb96a758781bc7dfc64b1134b2e6b54533027a25a712604eb"
+    },
+    "assets/vo/g_v2.wav": {
+      "hash": "741169cf39378f8d1ebe2bdd772ca2ae662426637add7c59f81cda74852bcad6",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\74\\741169cf39378f8d1ebe2bdd772ca2ae662426637add7c59f81cda74852bcad6"
+    },
+    "assets/vo/g_v3.wav": {
+      "hash": "d13eb2782a827c2238852d745d54e931d2e8dd218202a680803815050eed037a",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\d1\\d13eb2782a827c2238852d745d54e931d2e8dd218202a680803815050eed037a"
+    },
+    "assets/vo/g_v4.wav": {
+      "hash": "998ddd761d7478c984cc439b89c7c0f4a1f1bb236db80f31f2ff96eb97ae5104",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\99\\998ddd761d7478c984cc439b89c7c0f4a1f1bb236db80f31f2ff96eb97ae5104"
+    },
+    "assets/vo/g_v5.wav": {
+      "hash": "724c59b78bb046b54e72c75173103f99a01e2003cb4e6997768249266358b6f1",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\72\\724c59b78bb046b54e72c75173103f99a01e2003cb4e6997768249266358b6f1"
+    },
+    "assets/vo/g_v6.wav": {
+      "hash": "e9f5181f449fdf2b094aead46f545121f3a46e85a2b049c8439ceb37f4ff9c8a",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\e9\\e9f5181f449fdf2b094aead46f545121f3a46e85a2b049c8439ceb37f4ff9c8a"
+    },
+    "assets/vo/g_va.wav": {
+      "hash": "ca573a97b2bbee28c00c94badb6469f4a3aa743f64c19620fbd19167df1aeb10",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\ca\\ca573a97b2bbee28c00c94badb6469f4a3aa743f64c19620fbd19167df1aeb10"
+    },
+    "assets/vo/g_vb.wav": {
+      "hash": "15c38dc222d62235c0b841be1e5b00e303f3b03a66e18c7d0d24dbe11c52cf59",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\15\\15c38dc222d62235c0b841be1e5b00e303f3b03a66e18c7d0d24dbe11c52cf59"
+    },
+    "assets/vo/g_vc.wav": {
+      "hash": "6a45bee3d4a911669a7cf39b97a645d868c7cbaecd9021b8328d6af38f5c19e4",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\6a\\6a45bee3d4a911669a7cf39b97a645d868c7cbaecd9021b8328d6af38f5c19e4"
+    },
+    "assets/vo/g_vd.wav": {
+      "hash": "d8f877f8237d3bf642b025b0395ce44b3fc6da29b785be5cf7f1372baf6fdc61",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\d8\\d8f877f8237d3bf642b025b0395ce44b3fc6da29b785be5cf7f1372baf6fdc61"
+    },
+    "assets/vo/va.wav": {
+      "hash": "08eb602772be4d00b5c17bbc3ef0906a204f4b5f33f059fdfd61da6c68b9def0",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\08\\08eb602772be4d00b5c17bbc3ef0906a204f4b5f33f059fdfd61da6c68b9def0"
+    },
+    "assets/vo/vb.wav": {
+      "hash": "c17ca6ef55e07b7fd90d7c1fec8155406723f58d96d069e3b67c33b245368269",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\c1\\c17ca6ef55e07b7fd90d7c1fec8155406723f58d96d069e3b67c33b245368269"
+    },
+    "assets/vo/vc.wav": {
+      "hash": "194de4b48ed93cb05f703d3a5b32611012606b0647ff0891d35d53cb28204f8c",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\19\\194de4b48ed93cb05f703d3a5b32611012606b0647ff0891d35d53cb28204f8c"
+    },
+    "assets/vo/vd.wav": {
+      "hash": "3b77e545f0f99094d11c9754e42191dceb297ff19a031671b94fc8cca85793ce",
+      "content": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\3b\\3b77e545f0f99094d11c9754e42191dceb297ff19a031671b94fc8cca85793ce"
+    }
+  },
+  "revisions": {
+    "ac7b5a86-8144-4469-8c78-d0181a1a7e38": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794333185499,
+      "endedAt": 1794333185504,
+      "files": {
+        "index.html": {
+          "before": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\d4\\d4525a0f286a09f9a773166ac735c7ea74c2d3ae8c45c0408818a2e23cef4263",
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\20\\20e164f2f193f5ff4fb5f456bc681a323eaf353fe96fa8af35310925f4bf5e88"
+        }
+      }
+    },
+    "5fb6def1-c99e-48a8-a26c-26ed0289b125": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794333404419,
+      "endedAt": 1794333404422,
+      "files": {
+        "index.html": {
+          "before": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\20\\20e164f2f193f5ff4fb5f456bc681a323eaf353fe96fa8af35310925f4bf5e88",
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\2c\\2cb26f1cbbd2507a8482858b8e2309bf54507e48ce399d0bbf9975fd130b1cdf"
+        }
+      }
+    },
+    "4637a090-ecc1-4733-98af-c325691cb521": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794334104414,
+      "endedAt": 1794334104928,
+      "files": {
+        "assets/vo/g_v1.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\a9\\a972701be6e8b9ccb96a758781bc7dfc64b1134b2e6b54533027a25a712604eb"
+        },
+        "assets/vo/g_v2.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\74\\741169cf39378f8d1ebe2bdd772ca2ae662426637add7c59f81cda74852bcad6"
+        },
+        "assets/vo/g_v3.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\d1\\d13eb2782a827c2238852d745d54e931d2e8dd218202a680803815050eed037a"
+        },
+        "assets/vo/g_v4.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\99\\998ddd761d7478c984cc439b89c7c0f4a1f1bb236db80f31f2ff96eb97ae5104"
+        },
+        "assets/vo/g_v5.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\72\\724c59b78bb046b54e72c75173103f99a01e2003cb4e6997768249266358b6f1"
+        },
+        "assets/vo/g_v6.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\e9\\e9f5181f449fdf2b094aead46f545121f3a46e85a2b049c8439ceb37f4ff9c8a"
+        },
+        "assets/vo/g_va.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\ca\\ca573a97b2bbee28c00c94badb6469f4a3aa743f64c19620fbd19167df1aeb10"
+        },
+        "assets/vo/g_vb.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\15\\15c38dc222d62235c0b841be1e5b00e303f3b03a66e18c7d0d24dbe11c52cf59"
+        },
+        "assets/vo/g_vc.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\6a\\6a45bee3d4a911669a7cf39b97a645d868c7cbaecd9021b8328d6af38f5c19e4"
+        },
+        "assets/vo/g_vd.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\d8\\d8f877f8237d3bf642b025b0395ce44b3fc6da29b785be5cf7f1372baf6fdc61"
+        },
+        "assets/vo/va.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\08\\08eb602772be4d00b5c17bbc3ef0906a204f4b5f33f059fdfd61da6c68b9def0"
+        },
+        "assets/vo/vb.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\c1\\c17ca6ef55e07b7fd90d7c1fec8155406723f58d96d069e3b67c33b245368269"
+        },
+        "assets/vo/vc.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\19\\194de4b48ed93cb05f703d3a5b32611012606b0647ff0891d35d53cb28204f8c"
+        },
+        "assets/vo/vd.wav": {
+          "before": null,
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\3b\\3b77e545f0f99094d11c9754e42191dceb297ff19a031671b94fc8cca85793ce"
+        },
+        "index.html": {
+          "before": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\2c\\2cb26f1cbbd2507a8482858b8e2309bf54507e48ce399d0bbf9975fd130b1cdf",
+          "after": "C:\\Users\\cheta\\.cache\\hyperframes\\history\\3895a344-a55c-4ccc-b94c-e9c99878afc5\\blobs\\8d\\8d5f68a347d2bd5d60fc302c4f306080891f332e05da5567645d93886a8e387e"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "4637a090-ecc1-4733-98af-c325691cb521",
+      "id": "cd1cff37-5e44-45cb-abd9-b0325e5dc70b"
+    },
+    "revisions": {
+      "ac7b5a86-8144-4469-8c78-d0181a1a7e38": [
+        {
+          "id": "b1e6e08e-cc31-4066-aead-5ac0fd991145",
+          "scope": "project",
+          "report": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\b1e6e08e-cc31-4066-aead-5ac0fd991145.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794333202302,
+          "contentHash": "f47040e6ff0f6f2f70dbcd522b4aec7ae99d991cb84b4cea4c7217f6492f5516",
+          "revision": "ac7b5a86-8144-4469-8c78-d0181a1a7e38",
+          "inputFingerprint": "bcd1cfad42d6d52b6d95e31fe0ba03ebdbce3be5f194db7052b2bb05152f28ab",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "4637a090-ecc1-4733-98af-c325691cb521": [
+        {
+          "id": "cd1cff37-5e44-45cb-abd9-b0325e5dc70b",
+          "scope": "project",
+          "report": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\cd1cff37-5e44-45cb-abd9-b0325e5dc70b.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794334126975,
+          "contentHash": "9d5f5a61e9ba5f25a5ce71490c768089e1096720ecb48504de8b36f01b01e444",
+          "revision": "4637a090-ecc1-4733-98af-c325691cb521",
+          "inputFingerprint": "909ee74ffdd3fb3a183c66e4a706af9357900529ed3e54a95696ceddfa6bb522",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "ab36f730-4e83-4fc9-ac69-9f380998b585",
+        "scope": "project",
+        "report": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\ab36f730-4e83-4fc9-ac69-9f380998b585.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794333155854,
+        "contentHash": "d7077f5aad19b8c59dfa5a168e506128a734d6993084687b5912a37efeb9c969",
+        "revision": null,
+        "inputFingerprint": "2c5faf9edba18c879abffb0b52a1508a08e557984f335377ff72aced905bc71a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "d8834726-585d-42c8-805a-1d14c1b681b0",
+      "completedAt": 1794333502508,
+      "output": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\brag.mp4",
+      "status": "completed",
+      "revision": "5fb6def1-c99e-48a8-a26c-26ed0289b125"
+    },
+    "retainedRevisions": [
+      "5fb6def1-c99e-48a8-a26c-26ed0289b125",
+      "ac7b5a86-8144-4469-8c78-d0181a1a7e38"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

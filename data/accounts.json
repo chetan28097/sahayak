@@ -1,0 +1,61 @@
+[
+  {
+    "accountNumber": "30214567891", "holder": "Lakshmamma",
+    "holderLocal": { "kn": "ಲಕ್ಷ್ಮಮ್ಮ", "hi": "लक्ष्मम्मा", "en": "Lakshmamma" },
+    "branch": "Hosakote", "accountType": "SB", "fatherOrSpouse": "Late Narayanappa", "dob": "1958-06-02",
+    "mobile": "9845012345", "address": "14, Kote Road, Hosakote, Karnataka 562114", "aadhaarLast4": "7781",
+    "cardLast4": "4421", "balance": 18450.5, "schemes": ["pmsby"],
+    "transactions": [
+      { "date": "2026-11-02", "desc": "Cash deposit", "amount": 5000 },
+      { "date": "2026-10-28", "desc": "Pension credit", "amount": 3000 },
+      { "date": "2026-10-20", "desc": "ATM withdrawal", "amount": -2000 },
+      { "date": "2026-10-11", "desc": "PMSBY premium", "amount": -20 },
+      { "date": "2026-10-01", "desc": "Interest", "amount": 112.5 }
+    ]
+  },
+  {
+    "accountNumber": "50123456789", "holder": "Ramesh Kumar",
+    "holderLocal": { "kn": "ರಮೇಶ್ ಕುಮಾರ್", "hi": "रमेश कुमार", "en": "Ramesh Kumar" },
+    "branch": "Hosakote", "accountType": "SB", "fatherOrSpouse": "Shivappa", "dob": "1986-01-15",
+    "mobile": "9900112233", "address": "3rd Cross, Gandhi Nagar, Hosakote 562114", "aadhaarLast4": "3349",
+    "pan": "BQRPK4521M", "cardLast4": "8812", "balance": 72310, "schemes": [],
+    "transactions": [
+      { "date": "2026-11-05", "desc": "NEFT from Mysore Traders", "amount": 25000 },
+      { "date": "2026-11-01", "desc": "Cheque 000123", "amount": -12000 },
+      { "date": "2026-10-25", "desc": "UPI", "amount": -850 }
+    ]
+  },
+  {
+    "accountNumber": "40987654321", "holder": "Savitri Devi",
+    "holderLocal": { "kn": "ಸಾವಿತ್ರಿ ದೇವಿ", "hi": "सावित्री देवी", "en": "Savitri Devi" },
+    "branch": "Hosakote", "accountType": "SB", "fatherOrSpouse": "Mahesh Prasad", "dob": "1979-09-30",
+    "mobile": "9123456780", "address": "House 22, Ward 4, Hosakote 562114", "aadhaarLast4": "5506",
+    "cardLast4": "1093", "balance": 9120, "schemes": ["pmjjby"],
+    "transactions": [
+      { "date": "2026-11-03", "desc": "MGNREGA wages", "amount": 2450 },
+      { "date": "2026-10-18", "desc": "Cash withdrawal", "amount": -1500 }
+    ]
+  },
+  {
+    "accountNumber": "20456789012", "holder": "Manjunath Gowda",
+    "holderLocal": { "kn": "ಮಂಜುನಾಥ್ ಗೌಡ", "hi": "मंजुनाथ गौड़ा", "en": "Manjunath Gowda" },
+    "branch": "Hosakote", "accountType": "SB", "fatherOrSpouse": "Ramegowda", "dob": "1995-04-12",
+    "mobile": "9731234567", "address": "Sy No 45, Nandagudi, Hosakote 562122", "aadhaarLast4": "2210",
+    "cardLast4": "6630", "balance": 3540.75, "schemes": [],
+    "transactions": [
+      { "date": "2026-11-06", "desc": "PM-KISAN", "amount": 2000 },
+      { "date": "2026-10-30", "desc": "Fertiliser shop UPI", "amount": -1800 }
+    ]
+  },
+  {
+    "accountNumber": "60111222333", "holder": "Fatima Begum",
+    "holderLocal": { "kn": "ಫಾತಿಮಾ ಬೇಗಂ", "hi": "फ़ातिमा बेगम", "en": "Fatima Begum" },
+    "branch": "Hosakote", "accountType": "SB", "fatherOrSpouse": "Abdul Rahim", "dob": "1966-12-20",
+    "mobile": "9886543210", "address": "Masjid Street, Hosakote 562114", "aadhaarLast4": "9013",
+    "cardLast4": "2257", "balance": 41200, "schemes": [],
+    "transactions": [
+      { "date": "2026-11-04", "desc": "Cash deposit", "amount": 10000 },
+      { "date": "2026-10-15", "desc": "Electricity bill", "amount": -640 }
+    ]
+  }
+]

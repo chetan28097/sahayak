@@ -1,0 +1,29 @@
+LINKEDIN / X POST
+-----------------
+India speaks 22 languages. Bank forms mostly speak one.
+
+So I built Sahayak: you fill bank forms by talking, in Kannada, Hindi or English (Hinglish works too).
+
+🎙️ It asks one simple question at a time
+🔁 Every name, number and amount is read back before anything is submitted
+🎟️ You leave with a token and an encrypted, signed QR (AES-256-GCM + HMAC)
+✅ Branch staff verify every checklist item, with a full audit trail
+
+Built on Gnani AI: Vachana speech-to-text plus Timbre text-to-speech. Every word of narration in this video, and the Kannada greeting, is Gnani's Timbre voice.
+
+Cash deposits, account opening, PMJJBY/PMSBY/APY, KYC updates, card blocks and complaints. Every form is filled by voice.
+
+#GreatIndianAIInternshipChallenge #GnaniAI @Gnani.ai
+
+(All data in the demo is synthetic. No real customers, accounts or Aadhaar numbers.)
+
+
+SUBMISSION: WRITTEN PROJECT EXPLANATION
+---------------------------------------
+Sahayak is a voice-first bank kiosk for people who find bank forms hard: elderly customers, people with low literacy, and people who aren't comfortable in English. The customer chooses Kannada, Hindi or English and says what they need. Sahayak asks one question at a time and reads every value back for a spoken "yes". It fills the actual bank form: pay-in slip, AOF + CKYC + DA-1 nomination, PMJJBY/PMSBY/APY enrolment, KYC update or service request. The customer gets a token and an AES-256-GCM-encrypted, HMAC-signed QR. A separate branch console lets named staff verify each checklist item, ask the customer for more information, escalate, reject or complete the request, with every action recorded in an audit log.
+
+Gnani AI technology used:
+- Vachana STT (api.vachana.ai/stt/v3) transcribes the customer's speech in Kannada, Hindi, English and code-mixed Hinglish. Browser audio is resampled to 16 kHz mono WAV and capped below the 30 s limit.
+- Timbre TTS (v3.0, voice "Shivani") speaks every prompt and read-back. Fixed prompts are pre-generated and cached on disk to save credits.
+
+Rules always run first; an LLM is only a fallback for understanding free-form answers. No audio is stored, transcripts are masked, and Aadhaar appears only as its last 4 digits. All demo data is synthetic.

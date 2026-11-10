@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Sahayak Launch</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Lexend"; src: url("assets/fonts/lexend.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/source-sans.woff2") format("woff2"); font-weight: 200 900; }
+      @font-face { font-family: "Noto Sans Kannada"; src: url("assets/fonts/noto-kannada.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Noto Sans Devanagari"; src: url("assets/fonts/noto-deva.woff2") format("woff2"); font-weight: 100 900; }
+      :root {
+        --night: #070d22;
+        --navy: #1e3a8a;
+        --navy-dark: #172b66;
+        --gold: #e8a33d;
+        --gold-deep: #a16207;
+        --paper: #f6f8fb;
+        --ink: #0f172a;
+        --muted: #475569;
+        --line: #dbe2ea;
+        --ok: #15803d;
+        --ok-soft: #e3f4e8;
+        --green-in: #1f9d55;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--night); color: #fff; font-family: "Source Sans 3", "Noto Sans Devanagari", "Noto Sans Kannada", sans-serif; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--night); }
+      .bg { position: absolute; inset: 0; background:
+          radial-gradient(55% 60% at 75% 20%, rgba(30,58,138,0.55), transparent 70%),
+          radial-gradient(45% 50% at 15% 85%, rgba(232,163,61,0.18), transparent 70%), var(--night); }
+      .grid { position: absolute; inset: 0; opacity: 0.18;
+        background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+        background-size: 80px 80px; }
+      .clip { position: absolute; inset: 0; }
+      .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .display { font-family: "Lexend", "Noto Sans Devanagari", "Noto Sans Kannada", sans-serif; letter-spacing: -0.02em; }
+      .kn { font-family: "Noto Sans Kannada", sans-serif; }
+      .hi { font-family: "Noto Sans Devanagari", sans-serif; }
+      .eyebrow { font-family: "Lexend", sans-serif; font-size: 26px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+
+      /* S1 hook */
+      #s1-l1 { font-size: 118px; font-weight: 700; margin: 0; }
+      #s1-l2 { font-size: 92px; font-weight: 600; margin: 26px 0 0; color: rgba(255,255,255,0.6); }
+      #s1-l2 span { color: var(--gold); }
+      .jargon { position: absolute; padding: 14px 28px; border-radius: 999px; border: 2px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.05); font-family: "Lexend", sans-serif; font-size: 34px; color: rgba(255,255,255,0.7); }
+
+      /* S2 reveal */
+      #s2-name { font-size: 230px; font-weight: 800; margin: 0; line-height: 1; background: linear-gradient(100deg, #ffffff 30%, var(--gold) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .tri { margin-top: 44px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+      .tri p { margin: 0; font-size: 56px; font-weight: 600; color: #fff; }
+      .tri p.dim { color: rgba(255,255,255,0.75); }
+
+      /* S3 gnani voice */
+      .orb-wrap { position: relative; width: 300px; height: 300px; }
+      .ring { position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--gold); opacity: 0; }
+      .orb { position: absolute; inset: 40px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #f6c46b, var(--gold-deep)); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 120px rgba(232,163,61,0.45); }
+      .orb svg { width: 110px; height: 110px; }
+      #s3-cap { margin: 56px 0 0; font-size: 60px; font-weight: 600; max-width: 1500px; line-height: 1.35; }
+      #s3-tr { margin: 18px 0 0; font-size: 36px; color: rgba(255,255,255,0.7); }
+      .live-pill { margin-bottom: 48px; display: inline-flex; align-items: center; gap: 14px; padding: 12px 26px; border-radius: 999px; background: rgba(232,163,61,0.12); border: 2px solid rgba(232,163,61,0.5); font-family: "Lexend", sans-serif; font-size: 28px; color: #fde7bf; }
+      .dot { width: 14px; height: 14px; border-radius: 50%; background: #ef4444; }
+
+      /* S4 flow */
+      #s4-head { position: absolute; left: 140px; top: 150px; width: 520px; }
+      #s4-head h2 { font-size: 76px; line-height: 1.05; margin: 22px 0 0; font-weight: 700; }
+      #s4-head p { font-size: 34px; color: rgba(255,255,255,0.72); margin: 28px 0 0; line-height: 1.4; }
+      .card { position: absolute; left: 740px; top: 120px; width: 1060px; height: 840px; border-radius: 40px; background: #fff; color: var(--ink); overflow: hidden; box-shadow: 0 60px 140px -50px rgba(0,0,0,0.8); display: grid; grid-template-rows: 84px 1fr 60px; }
+      .card-top { display: flex; align-items: center; gap: 14px; padding: 0 32px; border-bottom: 2px solid var(--line); font-family: "Lexend", sans-serif; font-weight: 600; font-size: 26px; }
+      .mini-mic { width: 42px; height: 42px; border-radius: 50%; background: var(--gold-deep); display: flex; align-items: center; justify-content: center; }
+      .mini-mic svg { width: 22px; height: 22px; }
+      .card-body { display: grid; grid-template-columns: 1.2fr 1fr; min-height: 0; }
+      .chat { padding: 28px 30px; display: flex; flex-direction: column; gap: 14px; overflow: hidden; }
+      .b { max-width: 88%; padding: 14px 22px; border-radius: 24px; font-size: 27px; line-height: 1.3; opacity: 0; }
+      .b.bot { align-self: flex-start; background: var(--paper); border-top-left-radius: 8px; }
+      .b.you { align-self: flex-end; background: var(--navy); color: #fff; border-top-right-radius: 8px; }
+      .slip { border-left: 2px solid var(--line); background: #f9fafc; padding: 30px 30px; }
+      .slip h4 { margin: 0 0 22px; font-size: 24px; color: var(--muted); font-weight: 700; }
+      .f { margin-bottom: 22px; }
+      .f dt { font-size: 20px; color: var(--muted); }
+      .f dd { margin: 6px 0 0; position: relative; height: 48px; }
+      .f .empty { position: absolute; inset: 0; border: 2px dashed var(--line); border-radius: 10px; }
+      .f .val { position: absolute; inset: 0; display: flex; align-items: center; font-family: "Lexend", sans-serif; font-size: 30px; font-weight: 600; opacity: 0; white-space: nowrap; }
+      .f .val.small { font-size: 22px; }
+      #ready { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 16px; background: var(--ok-soft); color: var(--ok); font-weight: 700; font-size: 26px; opacity: 0; }
+      .card-bot { border-top: 2px solid var(--line); display: flex; align-items: center; padding: 0 32px; }
+      .prog { height: 8px; flex: 1; border-radius: 99px; background: var(--paper); overflow: hidden; }
+      #prog-fill { height: 100%; width: 100%; background: var(--gold-deep); border-radius: 99px; transform-origin: left center; }
+
+      /* S5 slip */
+      .slip-card { width: 1180px; display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center; padding: 64px 72px; border-radius: 40px; background: #fff; color: var(--ink); box-shadow: 0 60px 140px -50px rgba(0,0,0,0.8); text-align: left; }
+      .slip-card .lab { font-size: 26px; color: var(--muted); font-weight: 600; }
+      #token { white-space: nowrap; font-family: "Lexend", sans-serif; font-size: 124px; font-weight: 800; letter-spacing: 0.04em; color: var(--navy); line-height: 1; margin: 12px 0 30px; }
+      .chips { display: flex; gap: 14px; flex-wrap: wrap; }
+      .chip { padding: 12px 22px; border-radius: 999px; background: #e6ecfa; color: var(--navy); font-weight: 700; font-size: 25px; opacity: 0; }
+      .qr { width: 380px; height: 380px; padding: 22px; border-radius: 28px; border: 3px solid var(--line); background: #fff; }
+      .qr img { width: 100%; height: 100%; display: block; }
+      #s5-sub { margin: 48px 0 0; font-size: 38px; color: rgba(255,255,255,0.78); }
+
+      /* S6 console */
+      .console { width: 1320px; border-radius: 36px; background: #fff; color: var(--ink); box-shadow: 0 60px 140px -50px rgba(0,0,0,0.8); padding: 48px 60px; text-align: left; }
+      .stages { display: flex; gap: 14px; align-items: center; margin-bottom: 36px; }
+      .stage { padding: 12px 24px; border-radius: 999px; font-size: 25px; font-weight: 700; background: var(--paper); color: var(--muted); border: 2px solid var(--line); }
+      .arrow { color: #94a3b8; font-size: 26px; }
+      .ck { display: flex; align-items: center; gap: 22px; padding: 20px 0; border-top: 2px solid var(--line); font-size: 32px; }
+      .box { width: 44px; height: 44px; border-radius: 12px; border: 3px solid #cbd5e1; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; }
+      .tick { position: absolute; inset: -3px; border-radius: 12px; background: var(--ok); display: flex; align-items: center; justify-content: center; opacity: 0; }
+      .tick svg { width: 28px; height: 28px; }
+      .who { margin-left: auto; font-size: 24px; color: var(--muted); opacity: 0; }
+      #s6-sub { margin: 44px 0 0; font-size: 38px; color: rgba(255,255,255,0.78); }
+
+      /* S7 outro */
+      #s7-name { font-size: 210px; font-weight: 800; margin: 0; line-height: 1; }
+      #s7-tag { margin: 28px 0 0; font-size: 58px; font-weight: 500; color: rgba(255,255,255,0.85); }
+      .tricolor { margin: 54px 0 0; width: 520px; height: 10px; border-radius: 99px; display: flex; overflow: hidden; }
+      .tricolor i { flex: 1; display: block; }
+      #s7-built { margin: 44px 0 0; font-family: "Lexend", sans-serif; font-size: 36px; color: #fff; font-weight: 600; }
+      #s7-built span { color: var(--gold); }
+      #s7-tags { margin: 20px 0 0; font-size: 28px; color: rgba(255,255,255,0.6); }
+      .h2big { font-size: 84px; font-weight: 700; margin: 18px 0 0; line-height: 1.08; max-width: 1500px; }
+      .row3 { margin-top: 64px; display: flex; gap: 32px; justify-content: center; }
+      .pcard { width: 470px; padding: 40px 36px; border-radius: 32px; background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.14); border-top: 6px solid var(--gold); text-align: left; opacity: 0; }
+      .pcard h3 { margin: 0; font-family: "Lexend", "Noto Sans Kannada", "Noto Sans Devanagari", sans-serif; font-size: 44px; font-weight: 700; line-height: 1.15; }
+      .pcard p { margin: 16px 0 0; font-size: 30px; color: rgba(255,255,255,0.75); line-height: 1.35; }
+      .ucgrid { margin-top: 48px; width: 1680px; display: flex; flex-wrap: wrap; gap: 26px; justify-content: center; }
+      .uc { width: 540px; min-height: 250px; padding: 34px 34px; border-radius: 30px; background: #fff; color: var(--ink); text-align: left; opacity: 0; box-shadow: 0 40px 90px -50px rgba(0,0,0,0.9); }
+      .uc .n { font-family: "Lexend", sans-serif; font-size: 28px; font-weight: 700; color: var(--gold-deep); }
+      .uc h3 { margin: 8px 0 0; font-family: "Lexend", sans-serif; font-size: 42px; font-weight: 700; line-height: 1.1; }
+      .uc p { margin: 12px 0 0; font-size: 28px; color: var(--muted); line-height: 1.3; }
+      .rules { margin-top: 56px; width: 1500px; display: flex; flex-direction: column; gap: 24px; }
+      .rule { display: grid; grid-template-columns: 420px 1fr; align-items: center; gap: 40px; padding: 30px 44px; border-radius: 28px; background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.14); text-align: left; opacity: 0; }
+      .rule .big { font-family: "Lexend", sans-serif; font-size: 64px; font-weight: 800; color: var(--gold); white-space: nowrap; }
+      .rule p { margin: 0; font-size: 38px; line-height: 1.3; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="86.2">
+      <div class="bg"></div>
+      <div class="grid"></div>
+      <div id="glow" class="bg" style="opacity:0;background:radial-gradient(40% 45% at 50% 50%, rgba(232,163,61,0.22), transparent 70%)"></div>
+
+      <!-- S1 Hook -->
+      <section id="s1" class="clip" data-start="0" data-duration="4.6" data-track-index="1">
+        <div class="jargon" id="j1" style="left:170px;top:150px">PAN / Form 60</div>
+        <div class="jargon" id="j2" style="right:200px;top:190px">CKYC</div>
+        <div class="jargon" id="j3" style="left:260px;bottom:170px">DA-1 Nomination</div>
+        <div class="jargon" id="j4" style="right:240px;bottom:200px">Rule 114B</div>
+        <div class="jargon" id="j5" style="left:820px;top:90px">Re-KYC</div>
+        <div class="center">
+          <h1 id="s1-l1" class="display">India speaks 22 languages.</h1>
+          <p id="s1-l2" class="display">Bank forms? <span>Mostly one.</span></p>
+        </div>
+      </section>
+
+      <!-- S2 Reveal -->
+      <section id="s2" class="clip" data-start="4.6" data-duration="6.6" data-track-index="1">
+        <div class="center">
+          <div class="eyebrow" id="s2-eye">Meet</div>
+          <h1 id="s2-name" class="display">Sahayak</h1>
+          <div class="tri">
+            <p id="t-en" class="display">Bank forms, filled by talking.</p>
+            <p id="t-kn" class="kn dim">ಬ್ಯಾಂಕ್ ಫಾರ್ಮ್, ಮಾತಿನಲ್ಲೇ.</p>
+            <p id="t-hi" class="hi dim">बैंक फ़ॉर्म, बस बोलकर।</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SA Who it's for -->
+      <section id="sa" class="clip" data-start="11.2" data-duration="8.2" data-track-index="1">
+        <div class="center">
+          <div class="eyebrow" id="sa-eye">Built for</div>
+          <h2 id="sa-h" class="display h2big">The people bank forms leave behind.</h2>
+          <div class="row3">
+            <div class="pcard" id="wa1"><h3>Elders</h3><p>One question at a time. Big buttons. Nothing to type.</p></div>
+            <div class="pcard" id="wa2"><h3>People who struggle to read</h3><p>Everything is spoken and read back.</p></div>
+            <div class="pcard" id="wa3"><h3>ಕನ್ನಡ · हिन्दी</h3><p>Anyone more at home in Kannada or Hindi than English.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S3 Real Gnani voice -->
+      <section id="s3" class="clip" data-start="19.4" data-duration="4.2" data-track-index="1">
+        <div class="center">
+          <div class="live-pill" id="s3-pill"><span class="dot"></span>Live voice · Gnani Timbre TTS · Kannada</div>
+          <div class="orb-wrap" id="orb">
+            <div class="ring" id="r1"></div><div class="ring" id="r2"></div><div class="ring" id="r3"></div>
+            <div class="orb"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10a7 7 0 0 1-14 0"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div>
+          </div>
+          <p id="s3-cap" class="kn">ನಮಸ್ಕಾರ! ಬ್ಯಾಂಕ್ ಕೆಲಸದಲ್ಲಿ ನಾನು ಸಹಾಯ ಮಾಡುತ್ತೇನೆ.</p>
+          <p id="s3-tr">“Namaskara! I'll help you with your bank work.”</p>
+        </div>
+      </section>
+
+      <!-- SB Use cases -->
+      <section id="sb" class="clip" data-start="23.6" data-duration="16.2" data-track-index="1">
+        <div class="center">
+          <div class="eyebrow" id="sb-eye">Use cases</div>
+          <h2 id="sb-h" class="display h2big">Five everyday bank jobs.</h2>
+          <div class="ucgrid">
+            <div class="uc" id="u1"><div class="n">01</div><h3>Deposit cash</h3><p>Into your account or a family member's. Notes counted with you.</p></div>
+            <div class="uc" id="u2"><div class="n">02</div><h3>Open a new account</h3><p>Savings or Jan Dhan, with your nominee. Aadhaar photo pre-fills.</p></div>
+            <div class="uc" id="u3"><div class="n">03</div><h3>Insurance and pension</h3><p>PMJJBY, PMSBY and Atal Pension. Eligibility checked by age.</p></div>
+            <div class="uc" id="u4"><div class="n">04</div><h3>Change my details</h3><p>New mobile number, new address, nominee or re-KYC.</p></div>
+            <div class="uc" id="u5"><div class="n">05</div><h3>Card, cheque, complaint</h3><p>Block a lost card, order a cheque book, or raise a complaint.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S4 The flow -->
+      <section id="s4" class="clip" data-start="39.8" data-duration="9" data-track-index="1">
+        <div id="s4-head">
+          <div class="eyebrow">How it works</div>
+          <h2 class="display">One simple question at a time.</h2>
+          <p>Every name, number and amount is read back.</p>
+        </div>
+        <div class="card" id="card">
+          <div class="card-top"><span class="mini-mic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10a7 7 0 0 1-14 0"/></svg></span>Sahayak · Deposit cash</div>
+          <div class="card-body">
+            <div class="chat">
+              <div class="b bot" id="b1">Namaste! What do you need today?</div>
+              <div class="b you" id="b2">I want to deposit money.</div>
+              <div class="b bot" id="b3">Please say your account number.</div>
+              <div class="b you" id="b4">3021 4567 891</div>
+              <div class="b bot" id="b5">Account ending 7891, Lakshmamma. Is that right?</div>
+              <div class="b you" id="b6">Yes.</div>
+              <div class="b bot" id="b7">How much are you depositing?</div>
+              <div class="b you" id="b8">Twelve thousand five hundred.</div>
+            </div>
+            <div class="slip">
+              <h4>Pay-in slip</h4>
+              <dl style="margin:0">
+                <div class="f"><dt>Account</dt><dd><span class="empty" id="e1"></span><span class="val" id="v1">3021 4567 891</span></dd></div>
+                <div class="f"><dt>Name</dt><dd><span class="empty" id="e2"></span><span class="val" id="v2">Lakshmamma</span></dd></div>
+                <div class="f"><dt>Amount</dt><dd><span class="empty" id="e3"></span><span class="val" id="v3">₹12,500</span></dd></div>
+                <div class="f"><dt>In words</dt><dd><span class="empty" id="e4"></span><span class="val small" id="v4">Twelve thousand five hundred only</span></dd></div>
+              </dl>
+              <div id="ready"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Slip ready. Token NRT-4RU</div>
+            </div>
+          </div>
+          <div class="card-bot"><div class="prog"><div id="prog-fill"></div></div></div>
+        </div>
+      </section>
+
+      <!-- SC Branch rules -->
+      <section id="sc" class="clip" data-start="48.8" data-duration="12.8" data-track-index="1">
+        <div class="center">
+          <div class="eyebrow" id="sc-eye">Real branch practice</div>
+          <h2 id="sc-h" class="display h2big">The rules are built in.</h2>
+          <div class="rules">
+            <div class="rule" id="r-1"><span class="big">₹50,000+</span><p>PAN or Form 60 asked only at the threshold (Rule 114B).</p></div>
+            <div class="rule" id="r-2"><span class="big">₹500 × 25</span><p>Notes counted one by one. The count must match the amount.</p></div>
+            <div class="rule" id="r-3"><span class="big">KYC reused</span><p>Already a customer? Only the new facts are asked.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S5 Slip + QR -->
+      <section id="s5" class="clip" data-start="61.6" data-duration="4.2" data-track-index="1">
+        <div class="center">
+          <div class="slip-card" id="slipcard">
+            <div>
+              <div class="lab">Your token</div>
+              <div id="token">NRT-4RU</div>
+              <div class="chips">
+                <span class="chip" id="c1">AES-256-GCM encrypted</span>
+                <span class="chip" id="c2">HMAC-signed</span>
+                <span class="chip" id="c3">Aadhaar: last 4 only</span>
+              </div>
+            </div>
+            <div class="qr" id="qr"><img src="assets/qr.svg" alt="" /></div>
+          </div>
+          <p id="s5-sub">Phones see ciphertext. The branch sees the form.</p>
+        </div>
+      </section>
+
+      <!-- S6 Branch console -->
+      <section id="s6" class="clip" data-start="65.8" data-duration="5.4" data-track-index="1">
+        <div class="center">
+          <div class="console" id="console">
+            <div class="stages">
+              <span class="stage" id="st1">waiting</span><span class="arrow">→</span>
+              <span class="stage" id="st2">in review</span><span class="arrow">→</span>
+              <span class="stage" id="st3">verified</span><span class="arrow">→</span>
+              <span class="stage" id="st4">completed</span>
+            </div>
+            <div class="ck"><span class="box"><span class="tick" id="k1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></span>Card photo matches the original<span class="who" id="w1">Asha · 11:42</span></div>
+            <div class="ck"><span class="box"><span class="tick" id="k2"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></span>Signature collected at the counter<span class="who" id="w2">Asha · 11:43</span></div>
+            <div class="ck"><span class="box"><span class="tick" id="k3"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></span>Final read-back confirmed<span class="who" id="w3">Ravi · 11:44</span></div>
+          </div>
+          <p id="s6-sub">Complete is impossible until every item is verified.</p>
+        </div>
+      </section>
+
+      <!-- SD Privacy -->
+      <section id="sd" class="clip" data-start="71.2" data-duration="9.2" data-track-index="1">
+        <div class="center">
+          <div class="eyebrow" id="sd-eye">Privacy</div>
+          <h2 id="sd-h" class="display h2big">Your information stays safe.</h2>
+          <div class="row3">
+            <div class="pcard" id="pv1"><h3>Your voice is not kept</h3><p>Speech becomes text and the recording is deleted.</p></div>
+            <div class="pcard" id="pv2"><h3>•••• •••• 4821</h3><p>Aadhaar is only ever its last 4 digits.</p></div>
+            <div class="pcard" id="pv3"><h3>Balance stays silent</h3><p>Shown on screen, never spoken aloud.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S7 Outro -->
+      <section id="s7" class="clip" data-start="80.4" data-duration="5.8" data-track-index="1">
+        <div class="center">
+          <h1 id="s7-name" class="display">Sahayak</h1>
+          <p id="s7-tag" class="display">Banking, in your own language.</p>
+          <div class="tricolor" id="tric"><i style="background:#ff9933"></i><i style="background:#ffffff"></i><i style="background:#138808"></i></div>
+          <p id="s7-built">Built on <span>Gnani</span> · Vachana STT + Timbre TTS</p>
+          <p id="s7-tags">#GreatIndianAIInternshipChallenge  #GnaniAI</p>
+        </div>
+      </section>
+
+      <!-- Audio: voiceover (all Gnani Timbre TTS, voice Shivani) -->
+      <audio id="vo-v1" data-start="0.3" data-duration="4.16" data-track-index="3" data-volume="1" src="assets/vo/g_v1.wav"></audio>
+      <audio id="vo-v2" data-start="4.7" data-duration="6.16" data-track-index="5" data-volume="1" src="assets/vo/g_v2.wav"></audio>
+      <audio id="vo-va" data-start="11.4" data-duration="7.76" data-track-index="3" data-volume="1" src="assets/vo/g_va.wav"></audio>
+      <audio id="vo-vb" data-start="23.8" data-duration="15.76" data-track-index="5" data-volume="1" src="assets/vo/g_vb.wav"></audio>
+      <audio id="vo-v3" data-start="40.0" data-duration="7.76" data-track-index="3" data-volume="1" src="assets/vo/g_v3.wav"></audio>
+      <audio id="vo-vc" data-start="49.0" data-duration="12.56" data-track-index="5" data-volume="1" src="assets/vo/g_vc.wav"></audio>
+      <audio id="vo-v4" data-start="61.7" data-duration="4.16" data-track-index="3" data-volume="1" src="assets/vo/g_v4.wav"></audio>
+      <audio id="vo-v5" data-start="66.0" data-duration="5.12" data-track-index="5" data-volume="1" src="assets/vo/g_v5.wav"></audio>
+      <audio id="vo-vd" data-start="71.4" data-duration="8.96" data-track-index="3" data-volume="1" src="assets/vo/g_vd.wav"></audio>
+      <audio id="vo-v6" data-start="80.6" data-duration="4.64" data-track-index="5" data-volume="1" src="assets/vo/g_v6.wav"></audio>
+      <audio id="gnani" data-start="19.6" data-duration="3.7" data-track-index="4" data-volume="1" src="assets/vo/gnani-kn-greet.wav"></audio>
+      <audio id="music" data-start="0" data-duration="86.2" data-track-index="10" data-volume="1" src="assets/music/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3" data-automation='{"version": 1, "lanes": [{"target": "volume", "points": [{"t": 0, "v": 0.42}, {"t": 0.3, "v": 0.15}, {"t": 19.4, "v": 0.15}, {"t": 19.6, "v": 0.07}, {"t": 23.3, "v": 0.07}, {"t": 23.6, "v": 0.15}, {"t": 85.2, "v": 0.15}, {"t": 85.5, "v": 0.4}, {"t": 86.2, "v": 0}]}]}'></audio>
+      <!-- Audio: SFX -->
+      <audio id="sfx-0" data-start="2.25" data-duration="1.2" data-track-index="11" data-volume="0.75" src="assets/sfx/impact/impactPunch_heavy_000.ogg"></audio>
+      <audio id="sfx-1" data-start="4.75" data-duration="1.48" data-track-index="12" data-volume="0.8" src="assets/sfx/impact/impactBell_heavy_000.ogg"></audio>
+      <audio id="sfx-2" data-start="6.0" data-duration="0.4" data-track-index="13" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-3" data-start="8.55" data-duration="0.4" data-track-index="11" data-volume="0.6" src="assets/sfx/interface/drop_002.ogg"></audio>
+      <audio id="sfx-4" data-start="9.4" data-duration="0.4" data-track-index="12" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-5" data-start="14.15" data-duration="0.4" data-track-index="13" data-volume="0.6" src="assets/sfx/interface/drop_002.ogg"></audio>
+      <audio id="sfx-6" data-start="15.3" data-duration="0.4" data-track-index="11" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-7" data-start="16.95" data-duration="0.4" data-track-index="12" data-volume="0.6" src="assets/sfx/interface/drop_002.ogg"></audio>
+      <audio id="sfx-8" data-start="19.45" data-duration="0.2" data-track-index="13" data-volume="0.7" src="assets/sfx/interface/click_002.ogg"></audio>
+      <audio id="sfx-9" data-start="25.55" data-duration="0.4" data-track-index="11" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-10" data-start="26.85" data-duration="0.4" data-track-index="12" data-volume="0.6" src="assets/sfx/interface/drop_002.ogg"></audio>
+      <audio id="sfx-11" data-start="28.25" data-duration="0.4" data-track-index="13" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-12" data-start="33.65" data-duration="0.4" data-track-index="11" data-volume="0.6" src="assets/sfx/interface/drop_002.ogg"></audio>
+      <audio id="sfx-13" data-start="36.05" data-duration="0.4" data-track-index="12" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-14" data-start="39.85" data-duration="0.8" data-track-index="13" data-volume="0.7" src="assets/sfx/impact/impactSoft_medium_001.ogg"></audio>
+      <audio id="sfx-15" data-start="47.1" data-duration="1.48" data-track-index="11" data-volume="0.65" src="assets/sfx/impact/impactBell_heavy_000.ogg"></audio>
+      <audio id="sfx-16" data-start="51.45" data-duration="0.6" data-track-index="12" data-volume="0.7" src="assets/sfx/interface/switch_002.ogg"></audio>
+      <audio id="sfx-17" data-start="54.65" data-duration="0.6" data-track-index="13" data-volume="0.7" src="assets/sfx/interface/switch_002.ogg"></audio>
+      <audio id="sfx-18" data-start="56.55" data-duration="0.6" data-track-index="11" data-volume="0.7" src="assets/sfx/interface/switch_002.ogg"></audio>
+      <audio id="sfx-19" data-start="61.65" data-duration="0.8" data-track-index="12" data-volume="0.7" src="assets/sfx/impact/impactSoft_medium_003.ogg"></audio>
+      <audio id="sfx-20" data-start="66.8" data-duration="0.6" data-track-index="13" data-volume="0.7" src="assets/sfx/interface/switch_002.ogg"></audio>
+      <audio id="sfx-21" data-start="67.6" data-duration="0.6" data-track-index="11" data-volume="0.7" src="assets/sfx/interface/switch_002.ogg"></audio>
+      <audio id="sfx-22" data-start="68.4" data-duration="0.6" data-track-index="12" data-volume="0.7" src="assets/sfx/interface/switch_002.ogg"></audio>
+      <audio id="sfx-23" data-start="72.9" data-duration="0.4" data-track-index="13" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-24" data-start="74.45" data-duration="0.4" data-track-index="11" data-volume="0.6" src="assets/sfx/interface/drop_002.ogg"></audio>
+      <audio id="sfx-25" data-start="77.05" data-duration="0.4" data-track-index="12" data-volume="0.6" src="assets/sfx/interface/drop_001.ogg"></audio>
+      <audio id="sfx-26" data-start="80.5" data-duration="1.48" data-track-index="13" data-volume="0.85" src="assets/sfx/impact/impactBell_heavy_000.ogg"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+
+      // S1 hook (0-4.6)
+      tl.fromTo("#s1-l1", { scale: 1.06 }, { scale: 1, duration: 0.8, ease: E }, 0);
+      ["#j1", "#j2", "#j3", "#j4", "#j5"].forEach((id, i) => {
+        tl.fromTo(id, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 0.5 + i * 0.22);
+      });
+      tl.fromTo("#s1-l2", { y: 40, opacity: 0, scale: 0.94 }, { y: 0, opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, 2.25);
+      tl.to(["#j1", "#j2", "#j3", "#j4", "#j5"], { opacity: 0.25, filter: "blur(3px)", duration: 0.4 }, 2.3);
+      tl.to("#s1 .center", { scale: 1.06, opacity: 0, duration: 0.35, ease: "power2.in" }, 4.25);
+
+      // S2 reveal (4.6-19.4)
+      tl.fromTo("#s2-eye", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: E }, 4.7);
+      tl.fromTo("#s2-name", { scale: 1.5, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 4.8);
+      tl.fromTo("#glow", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 4.8);
+      tl.to("#glow", { opacity: 0.35, duration: 1.2 }, 5.3);
+      tl.fromTo("#t-en", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 6.0);
+      tl.fromTo("#t-kn", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 8.55);
+      tl.fromTo("#t-hi", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 9.4);
+      tl.to("#s2 .center", { opacity: 0, y: -30, duration: 0.35, ease: "power2.in" }, 10.85);
+
+      // S3 Gnani voice (19.4-39.8)
+      tl.fromTo("#s3-pill", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.35, ease: E }, 19.45);
+      tl.fromTo("#orb", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.8)" }, 19.45);
+      ["#r1", "#r2", "#r3"].forEach((id, i) => {
+        tl.fromTo(id, { scale: 1, opacity: 0.6 }, { scale: 1.7, opacity: 0, duration: 1.4, ease: "power1.out", repeat: 1 }, 19.65 + i * 0.45);
+      });
+      tl.fromTo("#s3-cap", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 19.65);
+      tl.fromTo("#s3-tr", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 20.2);
+      tl.to("#glow", { opacity: 1, duration: 0.5 }, 19.6);
+      tl.to("#glow", { opacity: 0.3, duration: 0.5 }, 22.8);
+      tl.to("#s3 .center", { opacity: 0, scale: 0.96, duration: 0.3, ease: "power2.in" }, 23.3);
+
+      // S4 flow (39.8-61.6)
+      tl.fromTo("#s4-head", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 39.85);
+      tl.fromTo("#card", { opacity: 0, y: 80, rotateX: 8 }, { opacity: 1, y: 0, rotateX: 0, duration: 0.6, ease: E }, 39.9);
+      tl.fromTo("#prog-fill", { scaleX: 0 }, { scaleX: 1, duration: 7.2, ease: "none" }, 40.3);
+      const bubbleAt = [40.35, 41.25, 42.15, 43.05, 43.95, 45.05, 45.8, 46.6];
+      bubbleAt.forEach((t, i) => {
+        tl.fromTo("#b" + (i + 1), { opacity: 0, y: 18, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(1.6)" }, t);
+      });
+      const fill = (n, t) => {
+        tl.to("#e" + n, { opacity: 0, duration: 0.2 }, t);
+        tl.fromTo("#v" + n, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: E }, t);
+      };
+      fill(1, 43.4); fill(2, 44.3); fill(3, 46.95); fill(4, 47.15);
+      tl.fromTo("#ready", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 47.1);
+      tl.to(["#card", "#s4-head"], { opacity: 0, y: -40, duration: 0.35, ease: "power2.in" }, 48.6);
+
+      // S5 slip (61.6-65.8)
+      tl.fromTo("#slipcard", { opacity: 0, scale: 0.9, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.4)" }, 61.65);
+      tl.fromTo("#qr", { opacity: 0, rotate: -6 }, { opacity: 1, rotate: 0, duration: 0.5, ease: E }, 62);
+      ["#c1", "#c2", "#c3"].forEach((id, i) => {
+        tl.fromTo(id, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: E }, 62.7 + i * 0.5);
+      });
+      tl.fromTo("#s5-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 62.2);
+      tl.to("#s5 .center", { opacity: 0, x: -80, duration: 0.35, ease: "power2.in" }, 65.45);
+
+      // S6 console (65.8-80.4)
+      tl.fromTo("#console", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: E }, 65.85);
+      tl.to("#st1", { backgroundColor: "#e6ecfa", color: "#1e3a8a", borderColor: "#1e3a8a", duration: 0.2 }, 66.1);
+      tl.to("#st1", { backgroundColor: "#f6f8fb", color: "#475569", borderColor: "#dbe2ea", duration: 0.2 }, 66.7);
+      tl.to("#st2", { backgroundColor: "#e6ecfa", color: "#1e3a8a", borderColor: "#1e3a8a", duration: 0.2 }, 66.7);
+      [66.8, 67.6, 68.4].forEach((t, i) => {
+        tl.fromTo("#k" + (i + 1), { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.4)" }, t);
+        tl.fromTo("#w" + (i + 1), { opacity: 0 }, { opacity: 1, duration: 0.3 }, t + 0.1);
+      });
+      tl.to("#st2", { backgroundColor: "#f6f8fb", color: "#475569", borderColor: "#dbe2ea", duration: 0.2 }, 68.7);
+      tl.to("#st3", { backgroundColor: "#e3f4e8", color: "#15803d", borderColor: "#15803d", duration: 0.2 }, 68.7);
+      tl.to("#st4", { backgroundColor: "#15803d", color: "#ffffff", borderColor: "#15803d", duration: 0.25 }, 69.2);
+      tl.fromTo("#s6-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 67.2);
+      tl.to("#s6 .center", { opacity: 0, scale: 0.96, duration: 0.3, ease: "power2.in" }, 70.9);
+
+      // S7 outro (80.4-38)
+      tl.fromTo("#s7-name", { scale: 1.4, opacity: 0, filter: "blur(16px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 80.5);
+      tl.to("#glow", { opacity: 1, duration: 0.5 }, 80.5);
+      tl.fromTo("#s7-tag", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 81.3);
+      tl.fromTo("#tric", { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.6, ease: "power2.out" }, 82.1);
+      tl.fromTo("#s7-built", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 82.6);
+      tl.fromTo("#s7-tags", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 83.4);
+
+      // SA who it's for (11.2-19.4)
+      tl.fromTo("#sa-eye", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 11.3);
+      tl.fromTo("#sa-h", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 11.35);
+      [["#wa1", 14.15], ["#wa2", 15.3], ["#wa3", 16.95]].forEach(([id, t]) => {
+        tl.fromTo(id, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.5)" }, t);
+      });
+      tl.to("#sa .center", { opacity: 0, y: -30, duration: 0.35, ease: "power2.in" }, 19.05);
+      // SB use cases (23.6-39.8)
+      tl.fromTo("#sb-eye", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 23.7);
+      tl.fromTo("#sb-h", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 23.75);
+      [["#u1", 25.55], ["#u2", 26.85], ["#u3", 28.25], ["#u4", 33.65], ["#u5", 36.05]].forEach(([id, t]) => {
+        tl.fromTo(id, { opacity: 0, y: 50, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.5)" }, t);
+      });
+      tl.to("#sb .center", { opacity: 0, scale: 0.97, duration: 0.35, ease: "power2.in" }, 39.45);
+      // SC rules (48.8-61.6)
+      tl.fromTo("#sc-eye", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 48.9);
+      tl.fromTo("#sc-h", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 48.95);
+      [["#r-1", 51.45], ["#r-2", 54.65], ["#r-3", 56.55]].forEach(([id, t]) => {
+        tl.fromTo(id, { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, t);
+      });
+      tl.to("#sc .center", { opacity: 0, y: -30, duration: 0.35, ease: "power2.in" }, 61.25);
+      // SD privacy (71.2-80.4)
+      tl.fromTo("#sd-eye", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 71.3);
+      tl.fromTo("#sd-h", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: E }, 71.35);
+      [["#pv1", 72.9], ["#pv2", 74.45], ["#pv3", 77.05]].forEach(([id, t]) => {
+        tl.fromTo(id, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.5)" }, t);
+      });
+      tl.to("#sd .center", { opacity: 0, scale: 0.97, duration: 0.35, ease: "power2.in" }, 80.05);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
