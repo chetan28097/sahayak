@@ -266,7 +266,6 @@
         {
           "id": "b1e6e08e-cc31-4066-aead-5ac0fd991145",
           "scope": "project",
-          "report": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\b1e6e08e-cc31-4066-aead-5ac0fd991145.json",
           "metadata": {
             "ok": true,
             "browserSkipped": false,
@@ -291,7 +290,9 @@
           "revision": "ac7b5a86-8144-4469-8c78-d0181a1a7e38",
           "inputFingerprint": "bcd1cfad42d6d52b6d95e31fe0ba03ebdbce3be5f194db7052b2bb05152f28ab",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "37e55885-f27a-4857-8013-14f5dd6788ca"
         }
       ],
       "4637a090-ecc1-4733-98af-c325691cb521": [
@@ -367,15 +368,15 @@
   },
   "renders": {
     "latest": {
-      "id": "d8834726-585d-42c8-805a-1d14c1b681b0",
-      "completedAt": 1794333502508,
-      "output": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\brag.mp4",
+      "id": "37e55885-f27a-4857-8013-14f5dd6788ca",
+      "completedAt": 1794334326727,
+      "output": "C:\\Users\\cheta\\github repos\\bank\\brag-output\\sahayak-demo-gnani.mp4",
       "status": "completed",
-      "revision": "5fb6def1-c99e-48a8-a26c-26ed0289b125"
+      "revision": "4637a090-ecc1-4733-98af-c325691cb521"
     },
     "retainedRevisions": [
-      "5fb6def1-c99e-48a8-a26c-26ed0289b125",
-      "ac7b5a86-8144-4469-8c78-d0181a1a7e38"
+      "4637a090-ecc1-4733-98af-c325691cb521",
+      "5fb6def1-c99e-48a8-a26c-26ed0289b125"
     ]
   },
   "pendingArtifactCleanup": []

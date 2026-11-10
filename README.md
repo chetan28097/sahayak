@@ -1,4 +1,17 @@
-# Sahayak — voice-first bank assistance and branch operations
+# Sahayak: voice-first bank assistance and branch operations
+
+> Fill Indian bank forms by talking, in Kannada, Hindi or English. Built on **Gnani AI**: Vachana speech-to-text (`prisma-v3.0`) and Timbre text-to-speech (`timbre-v3.0`, voice Shivani).
+> Entry for the Great Indian AI Internship Challenge (#GreatIndianAIInternshipChallenge #GnaniAI).
+
+## Demo video
+
+[![Sahayak demo video: watch the voice-first bank assistant in action](brag-output/brag.jpg)](brag-output/sahayak-demo-gnani.mp4)
+
+**[▶ Watch the demo (MP4, narrated in Gnani's Timbre voice)](brag-output/sahayak-demo-gnani.mp4)** · [Short launch cut](brag-output/brag.mp4)
+
+All data in the demo is synthetic. No real customers, accounts or Aadhaar numbers.
+
+## What it is
 
 Two clearly separate apps in one Next.js project:
 
